@@ -9,7 +9,7 @@ def draw_plot():
 
     # Create scatter plot
     x = time = df.reset_index()['Year'].dt.year
-    x_2050 = pd.DataFrame(np.arange(2013,2051), columns=['Year'])
+    x_2050 = pd.DataFrame(np.arange(2014,2051), columns=['Year'])
     x_for = pd.concat([x,x_2050]).reset_index().drop(columns='index')
     y = df.iloc[:,0]
     fig, ax = plt.subplots()
